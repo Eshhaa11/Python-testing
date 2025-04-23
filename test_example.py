@@ -1,45 +1,41 @@
+from calculator import Calculator
+
 def test_add() :
+    calc = Calculator()
 
-    assert add(1, 2) == 3
+    assert calc.add(1, 2) == 3
 
-    assert add(0, 0) ==0
+    assert calc.add(0, 0) == 0
 
-    assert add(-1, 1) == 0
-
-def add(a,b):
-    return a + b
-
+    assert calc.add(-1, 1) == 0
 
 def test_sub() :
-    assert sub(1, 2) == -1
+    calc = Calculator()
 
-    assert sub(0, 0) == 0
+    assert calc.sub(2,1) == 1
 
-    assert sub(1, 1) == 0
+    assert calc.sub(5, 2) == 3
 
-def sub(a,b):
-    return a - b
-
-def test_multiplication() :
-
-    assert multiplication(2, 2) == 4
-
-    assert multiplication(10, 4) == 40
-
-    assert multiplication(15, 2) == 30
-
-def multiplication(a,b):
-    return a * b
-
+    assert calc.sub(10, 5) == 5
 
 def test_division() :
-    assert division(10, 4) == 2.5
+    calc = Calculator()
 
-    assert division(25, 5) == 5
+    assert calc.division(10,2) == 5
 
-    assert division(28, 2) == 14
+    assert calc.division(15, 2) == 7.5
 
-def division(a,b):
-    return a / b
+    assert calc.division(10, 5) == 2
+
+def test_multiplication() :
+    calc = Calculator()
+
+    assert calc.multiplication(11,2) == 22
+
+    assert calc.multiplication(20, 2) == 40
+
+    assert calc.multiplication(8, 2) == 16
+
+
 
 
