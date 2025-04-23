@@ -19,7 +19,16 @@ def test_sub() :
     assert calc.sub(10, 5) == 5
 
 def test_division() :
+
     calc = Calculator()
+
+    try:
+
+        calc.division(5,0)
+
+    except ValueError as e :
+
+        assert str(e) == "Cannot divide by zero"
 
     assert calc.division(10,2) == 5
 
